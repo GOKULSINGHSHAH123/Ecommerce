@@ -17,10 +17,10 @@ const ShopContextProvider = (props)=>{
     const [cartItems,setCartItems] = useState(getDefaultcart())
 
     useEffect(()=>{
-            fetch('http://localhost:4000/allproduct',{method:"POST"}).then((res)=>res.json().then((data)=>setAll_products(data)))
+            fetch('https://ecommerce-uj12.onrender.com/allproduct',{method:"POST"}).then((res)=>res.json().then((data)=>setAll_products(data)))
 
             if(localStorage.getItem('auth-token')){
-                fetch('http://localhost:4000/getcart',{
+                fetch('https://ecommerce-uj12.onrender.com/getcart',{
                     method:"POST",
                     headers:{
                         Accept: 'application/json',
@@ -43,7 +43,7 @@ const ShopContextProvider = (props)=>{
         
 
         if(localStorage.getItem('auth-token')){
-            fetch("http://localhost:4000/addToCart",{
+            fetch("https://ecommerce-uj12.onrender.com/addToCart",{
                 method:"POST",
                 headers:{
                     Accept:'application/form-data',
@@ -60,7 +60,7 @@ const ShopContextProvider = (props)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         
         if(localStorage.getItem('auth-token')){
-            fetch("http://localhost:4000/removefromcart",{
+            fetch("https://ecommerce-uj12.onrender.com/removefromcart",{
                 method:"POST",
                 headers:{
                     Accept:'application/form-data',

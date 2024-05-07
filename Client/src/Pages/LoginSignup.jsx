@@ -10,7 +10,7 @@ export const LoginSignup = () => {
   const login = async () => {
     console.log("Login",formdata)
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch('https://ecommerce-uj12.onrender.com/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -30,7 +30,7 @@ export const LoginSignup = () => {
   const signup = async () => {
     console.log("Signup", formdata)
     let responseData;
-    await fetch('http://localhost:4000/Signup',{
+    await fetch('https://ecommerce-uj12.onrender.com/Signup',{
       method:'POST',
       headers:{
         Accept:'application/form-data',

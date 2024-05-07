@@ -8,7 +8,7 @@ export const Popular = () => {
 
 
     useEffect(()=>{
-      fetch('http://localhost:4000/popularinwomen',{
+      fetch('https://ecommerce-uj12.onrender.com/popularinwomen',{
         method:"POST"
       }).then((res)=>res.json())
       .then((data)=>setPopularproducts(data))
