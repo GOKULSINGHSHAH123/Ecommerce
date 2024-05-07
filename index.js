@@ -21,10 +21,9 @@ app2.use(express.json());
 app2.use(cors());
 
 app.use(express.static(path.join(__dirname,'/Client/dist')))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
-  });
-
+app.get('*',(req,res) =>{
+    res.sendFile(path.join(__dirname,'/Client/dist/index.html'))
+  })
 // Database connection with MongoDB
 mongoose.connect("mongodb+srv://gokulsinghshah041:Mongodb@cluster0.zhurgxa.mongodb.net/Projectreact");
 
