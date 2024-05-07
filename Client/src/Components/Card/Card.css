@@ -1,0 +1,17 @@
+.card {
+    border: 1px solid rgb(246, 241, 241);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px white;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+  }
+  
+  .card img {
+    display: inline-block;
+    flex: 1; /* This will make the image stretch vertically */
+ 
+  }
